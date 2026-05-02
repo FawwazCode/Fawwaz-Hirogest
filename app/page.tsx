@@ -10,19 +10,11 @@ export default function Home() {
     <main className="relative flex min-h-screen flex-col overflow-hidden bg-white">
       <BackgroundGlow />
       <div className="relative">
-        <HeroClient
-          // name="Fawwaz"
-          // highlight="Hirogest"
-          // subtitle="Frontend Developer"
-        />
+        <HeroClient/>
         <About />
         <TechStack />
         <Projects />
-        <Contact
-          // email="fawwaz@example.com"
-          // github="https://github.com/username"
-          // linkedin="https://www.linkedin.com/in/username"
-        />
+        <Contact />
       </div>
     </main>
   );
