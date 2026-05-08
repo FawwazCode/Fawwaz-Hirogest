@@ -15,13 +15,13 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "Modern E-Commerce Storefront",
+    title: "Freelance Dashboard",
     description:
-      "A high-performance e-commerce frontend with complex state management, advanced product filtering, and a seamless cart experience.",
-    tech: ["Next.js", "Tailwind CSS", "Zustand"],
+      "A modern freelance management dashboard built with Next.js and Tailwind CSS, designed to manage projects, clients, tasks, invoices, and analytics in one clean and responsive platform.",
+    tech: ["Next.js", "Tailwind CSS", "Framer Motion"],
     imageSrc:
-      "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='1200'%20height='675'%3E%3Cdefs%3E%3CradialGradient%20id='g'%20cx='50%25'%20cy='35%25'%20r='75%25'%3E%3Cstop%20offset='0%25'%20stop-color='%23ef4444'%20stop-opacity='.55'/%3E%3Cstop%20offset='55%25'%20stop-color='%23dc2626'%20stop-opacity='.22'/%3E%3Cstop%20offset='100%25'%20stop-color='%23000000'%20/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect%20width='1200'%20height='675'%20fill='url(%23g)'/%3E%3C/svg%3E",
-    liveHref: "#",
+       "https://mini.s-shot.ru/1366x768/JPEG/1366/Z100/?https://fawwaz-code-freelance-dashboard.vercel.app/",
+    liveHref: "https://fawwaz-code-freelance-dashboard.vercel.app/",
   },
   {
     title: "Interactive Kanban Dashboard",
@@ -84,6 +84,7 @@ export default function Projects() {
           <h2 className="text-balance text-3xl font-semibold tracking-tight text-zinc-950 sm:text-4xl">
             Projects
           </h2>
+
           <p className="mt-4 text-pretty text-sm leading-7 tracking-tight text-zinc-600 sm:text-base">
             A curated selection of work—focused on clean UI, performance, and
             thoughtful details.
@@ -108,15 +109,16 @@ export default function Projects() {
               </div>
 
               <div className="relative">
-                <div className="relative aspect-[16/9] w-full overflow-hidden border-b border-black/10">
+                <div className="relative aspect-[16/9] w-full overflow-hidden border-b border-black/10 bg-black">
                   <Image
                     src={p.imageSrc}
                     alt={`${p.title} preview`}
                     fill
-                    className="object-cover opacity-90 transition duration-500 group-hover:opacity-100 group-hover:scale-[1.02]"
+                    unoptimized
+                    className="object-cover object-top opacity-90 transition duration-500 group-hover:opacity-100 group-hover:scale-[1.02]"                    
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    priority={false}
                   />
+
                   <div className="absolute inset-0 bg-gradient-to-t from-white/40 via-white/0 to-white/10" />
                 </div>
 
@@ -124,6 +126,7 @@ export default function Projects() {
                   <h3 className="text-pretty text-lg font-semibold tracking-tight text-zinc-950">
                     {p.title}
                   </h3>
+
                   <p className="mt-2 text-pretty text-sm leading-7 tracking-tight text-zinc-600">
                     {p.description}
                   </p>
@@ -142,6 +145,8 @@ export default function Projects() {
                   <div className="mt-6 flex items-center gap-3">
                     <Link
                       href={p.liveHref ?? "#"}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[rgb(var(--accent-1)/1)] to-[rgb(var(--accent-2)/1)] px-4 py-2 text-xs font-semibold tracking-tight text-white ring-1 ring-white/10 transition hover:scale-[1.03] focus:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(var(--accent-1)/0.6)]"
                     >
                       Live Demo
@@ -156,4 +161,3 @@ export default function Projects() {
     </section>
   );
 }
-
