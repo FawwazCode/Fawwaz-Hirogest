@@ -20,7 +20,7 @@ const projects: Project[] = [
       "A modern freelance management dashboard built with Next.js and Tailwind CSS, designed to manage projects, clients, tasks, invoices, and analytics in one clean and responsive platform.",
     tech: ["Next.js", "Tailwind CSS", "Framer Motion"],
     imageSrc:
-       "https://mini.s-shot.ru/1366x768/JPEG/1366/Z100/?https://fawwaz-code-freelance-dashboard.vercel.app/",
+    "https://mini.s-shot.ru/1366x768/JPEG/1366/Z100/?https://fawwaz-code-freelance-dashboard.vercel.app/",
     liveHref: "https://fawwaz-code-freelance-dashboard.vercel.app/",
   },
   {
@@ -29,7 +29,7 @@ const projects: Project[] = [
       "A responsive task management board featuring drag-and-drop interactions, optimistic UI updates, and smooth animations.",
     tech: ["React", "TypeScript", "Framer Motion"],
     imageSrc:
-      "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='1200'%20height='675'%3E%3Cdefs%3E%3CradialGradient%20id='g'%20cx='50%25'%20cy='30%25'%20r='80%25'%3E%3Cstop%20offset='0%25'%20stop-color='%23ef4444'%20stop-opacity='.48'/%3E%3Cstop%20offset='55%25'%20stop-color='%23991b1b'%20stop-opacity='.16'/%3E%3Cstop%20offset='100%25'%20stop-color='%23000000'%20/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect%20width='1200'%20height='675'%20fill='url(%23g)'/%3E%3C/svg%3E",
+         "projects/interactive-kanban-dashboard.png",
     liveHref: "#",
   },
   {
