@@ -24,10 +24,10 @@ const projects: Project[] = [
     liveHref: "https://fawwaz-code-freelance-dashboard.vercel.app/",
   },
   {
-    title: "Interactive Kanban Dashboard",
+    title: "System Ticketing Management",
     description:
-      "A responsive task management board featuring drag-and-drop interactions, optimistic UI updates, and smooth animations.",
-    tech: ["React", "TypeScript", "Framer Motion"],
+      "Develop a ticket management system to assist the helpdesk team in monitoring and resolve tickets efficiently",
+    tech: ["React", "TypeScript", "Next.js"],
     imageSrc:
          "projects/interactive-kanban-dashboard.png",
     liveHref: "#",
