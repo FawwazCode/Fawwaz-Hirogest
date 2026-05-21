@@ -7,6 +7,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "image.thum.io",
       },
+      {
+        protocol: "https",
+        hostname: "mini.s-shot.ru",
+      },
     ],
   },
 };

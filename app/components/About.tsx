@@ -12,7 +12,7 @@ type AboutProps = {
 
 export default function About({
   title = "About Me",
-  paragraph = "I’m a developer who enjoys turning ideas into polished, high-performance interfaces. I care about clean architecture, accessible UI, and details that make products feel premium—balancing speed, readability, and delightful interactions.",
+  paragraph = "I’m a FrontEnd developer who enjoys turning ideas into polished, high-performance interfaces. I care about clean architecture, accessible UI, and details that make products feel premium—balancing speed, readability, and delightful interactions.",
   name = "Fawwaz Hirogest -- FrontEnd Developer"
 }: AboutProps) {
   const reduceMotion = false;
@@ -71,7 +71,7 @@ export default function About({
               </div>
               <div className="relative">
                 <Image
-                  src="/image/profile.jpg"
+                  src="/image/profile3.jpeg"
                   alt="Profile photo"
                   width={0}
                   height={0}

@@ -1,7 +1,8 @@
 "use client";
 
-import { motion, useMotionValue, useSpring, useTransform, useScroll, useMotionTemplate } from "framer-motion";
+import { motion, useMotionValue, useSpring, useTransform, useScroll } from "framer-motion";
 import { useCallback, useEffect, useRef } from "react";
+import Navbar from "./Navbar";
 
 type HeroProps = {
   name?: string;
@@ -74,34 +75,7 @@ export default function Hero({
 
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-white text-zinc-950">
-      <motion.header 
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
-        className="fixed top-0 left-0 w-full px-6 py-4 sm:px-10 sm:py-6 z-[100] flex items-center justify-center sm:justify-between backdrop-blur-md bg-white/70 border-b border-black/5"
-      >
-        <div className="text-sm font-medium text-zinc-900 w-auto text-center sm:text-left">
-          Fawwaz Hirogest
-        </div>
-        <nav className="hidden sm:flex items-center justify-end w-auto gap-8 text-sm font-medium text-zinc-800">
-          <a href="#about" tabIndex={0} className="group relative hover:text-zinc-950 transition-colors focus:outline-none">
-            About
-            <span className="absolute -bottom-1 left-0 h-[1.5px] w-full origin-left scale-x-0 bg-zinc-950 transition-transform duration-300 ease-out group-hover:scale-x-100 group-focus:scale-x-100 group-active:scale-x-100" />
-          </a>
-          <a href="#techstack" tabIndex={0} className="group relative hover:text-zinc-950 transition-colors focus:outline-none">
-            Tech Stack
-            <span className="absolute -bottom-1 left-0 h-[1.5px] w-full origin-left scale-x-0 bg-zinc-950 transition-transform duration-300 ease-out group-hover:scale-x-100 group-focus:scale-x-100 group-active:scale-x-100" />
-          </a>
-          <a href="#projects" tabIndex={0} className="group relative hover:text-zinc-950 transition-colors focus:outline-none">
-            Projects
-            <span className="absolute -bottom-1 left-0 h-[1.5px] w-full origin-left scale-x-0 bg-zinc-950 transition-transform duration-300 ease-out group-hover:scale-x-100 group-focus:scale-x-100 group-active:scale-x-100" />
-          </a>
-          <a href="#contact" tabIndex={0} className="group relative hover:text-zinc-950 transition-colors focus:outline-none">
-            Contact
-            <span className="absolute -bottom-1 left-0 h-[1.5px] w-full origin-left scale-x-0 bg-zinc-950 transition-transform duration-300 ease-out group-hover:scale-x-100 group-focus:scale-x-100 group-active:scale-x-100" />
-          </a>
-        </nav>
-      </motion.header>
+      <Navbar />
 
       <div className="pointer-events-none absolute inset-0 bg-white" />
 
