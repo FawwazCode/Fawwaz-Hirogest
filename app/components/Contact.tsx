@@ -13,6 +13,7 @@ import {
   AlertCircle,
 } from "lucide-react";
 import type { ContactFormData } from "@/lib/contact";
+import { FORMSPREE_ENDPOINT, submitToFormspree } from "@/lib/formspree";
 
 function GitHubIcon({ className }: { className?: string }) {
   return (
@@ -52,6 +53,8 @@ type ContactProps = {
   github?: string;
   linkedin?: string;
   instagram?: string;
+  /** Override Formspree endpoint (defaults to FORMSPREE_ENDPOINT / env). */
+  formspreeUrl?: string;
 };
 
 type FormStatus = "idle" | "loading" | "success" | "error";
@@ -130,6 +133,7 @@ const inputBase =
 
 function validateClient(data: ContactFormData): FieldErrors {
   const errors: FieldErrors = {};
+  if (data.website?.trim()) return errors;
   if (!data.name.trim()) errors.name = "Name is required.";
   if (!data.email.trim()) errors.email = "Email is required.";
   else if (!EMAIL_REGEX.test(data.email.trim()))
@@ -145,6 +149,7 @@ export default function Contact({
   github = "https://github.com/FawwazCode",
   linkedin = "https://www.linkedin.com/in/fawwaz-hirogest-putra-andaya/",
   instagram = "https://www.instagram.com/fwzzz_x23",
+  formspreeUrl = FORMSPREE_ENDPOINT,
 }: ContactProps) {
   const reduceMotion = usePrefersReducedMotion();
   const links = buildLinks({ email, github, linkedin, instagram });
@@ -166,7 +171,7 @@ export default function Contact({
         name: String(formData.get("name") ?? "").trim(),
         email: String(formData.get("email") ?? "").trim(),
         message: String(formData.get("message") ?? "").trim(),
-        website: String(formData.get("website") ?? "").trim(),
+        website: String(formData.get("_gotcha") ?? "").trim(),
       };
 
       const clientErrors = validateClient(payload);
@@ -182,29 +187,27 @@ export default function Contact({
       setStatus("loading");
       setFeedback("");
 
+      if (payload.website) {
+        setStatus("error");
+        setFeedback("Something went wrong. Please try again.");
+        isSubmittingRef.current = false;
+        return;
+      }
+
       try {
-        const response = await fetch("/api/contact", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
+        const result = await submitToFormspree(
+          {
             name: payload.name,
             email: payload.email,
             message: payload.message,
-            website: payload.website,
-          }),
-        });
+            gotcha: payload.website,
+          },
+          formspreeUrl
+        );
 
-        const result = (await response.json()) as {
-          error?: string;
-          field?: keyof ContactFormData;
-        };
-
-        if (!response.ok) {
-          if (result.field) {
-            setFieldErrors({ [result.field]: result.error ?? "Invalid value." });
-          }
+        if (!result.ok) {
           setStatus("error");
-          setFeedback(result.error ?? "Failed to send message.");
+          setFeedback(result.message);
           return;
         }
 
@@ -218,7 +221,7 @@ export default function Contact({
         isSubmittingRef.current = false;
       }
     },
-    []
+    [formspreeUrl]
   );
 
   const isLoading = status === "loading";
@@ -334,10 +337,10 @@ export default function Contact({
                 noValidate
                 className="relative mt-8 space-y-5"
               >
-                {/* Honeypot — hidden from users */}
+                {/* Formspree honeypot — must stay empty */}
                 <input
                   type="text"
-                  name="website"
+                  name="_gotcha"
                   tabIndex={-1}
                   autoComplete="off"
                   className="pointer-events-none absolute -left-[9999px] h-0 w-0 opacity-0"
