@@ -46,6 +46,15 @@ const projects: Project[] = [
     liveHref: "#",
   },
   {
+    title: "Nexora E-commerce",
+    description:
+      "Build a modern e-commerce platform for managing products, orders, and customer purchases with ease",
+    tech: ["Next.js", "React.js", "Tailwind CSS", "shadcn/ui", "Lucide React", "PostgreSQL"],
+    imageSrc:
+      "https://mini.s-shot.ru/1366x768/JPEG/1366/Z100/?https://nexora-livid-iota.vercel.app/",
+    liveHref: "https://nexora-fawwazcodes-projects.vercel.app/",
+  },
+  {
     title: "Landing Page Cafe",
     description:
       "A modern cafe landing page featuring elegant UI, smooth animations, responsive design, and an engaging user experience for showcasing menu and brand identity.",    
