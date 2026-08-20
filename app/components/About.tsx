@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useCallback, useRef } from "react";
+import Lanyard from "./Lanyard/Lanyard";
 
 type AboutProps = {
   title?: string;
@@ -64,21 +65,15 @@ export default function About({
               onMouseLeave={handlePointerLeave}
               style={{ rotateX, rotateY }}
               tabIndex={0}
-              className="group relative overflow-hidden rounded-[2rem] border border-black/10 bg-white shadow-[0_18px_55px_-40px_rgba(0,0,0,0.25)] transition-all duration-700 ease-[0.22,1,0.36,1] hover:shadow-[0_25px_65px_-40px_rgba(0,0,0,0.3)] focus:outline-none"
+              className="group relative overflow-visible focus:outline-none"            
             >
               <div className="pointer-events-none absolute inset-0 z-10 opacity-60 mix-blend-overlay transition-opacity duration-700 group-hover:opacity-0 group-focus:opacity-0 group-active:opacity-0">
                 <div className="absolute -top-20 left-1/2 h-64 w-64 -translate-x-1/2 rounded-full bg-gradient-to-r from-[rgb(var(--accent-1)/0.3)] to-[rgb(var(--accent-2)/0.3)] blur-3xl" />
               </div>
               <div className="relative">
-                <Image
-                  src="/image/profile3.jpeg"
-                  alt="Profile photo"
-                  width={0}
-                  height={0}
-                  sizes="100vw"
-                  style={{ width: '100%', height: 'auto' }}
-                  priority={false}
-                  className="grayscale transition-all duration-700 ease-[0.22,1,0.36,1] group-hover:scale-105 group-hover:grayscale-0 group-active:scale-105 group-active:grayscale-0 group-focus:scale-105 group-focus:grayscale-0"
+                <Lanyard 
+                  position={[0,0,13]}
+                  gravity={[0,-40,0]}
                 />
               </div>
             </motion.div>

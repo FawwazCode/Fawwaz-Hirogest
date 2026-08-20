@@ -150,7 +150,7 @@ export default function Hero({
                   animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                   transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
                   whileHover={{ scale: 1.05, y: -8, rotate: -1.5, transition: { duration: 0.35, ease: [0.22, 1, 0.36, 1] } }}
-                  className="text-[clamp(3.5rem,10vw,9rem)] font-black leading-[0.81] tracking-[-0.05em] text-zinc-950"
+                  className="font-archivo text-[clamp(3.5rem,10vw,9rem)] font-black leading-[0.81] tracking-[-0.05em] text-zinc-950"
                 >
                   {name}
                 </motion.h1>
@@ -162,7 +162,7 @@ export default function Hero({
                   animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                   transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.35 }}
                   whileHover={{ scale: 1.05, y: -8, rotate: 1.5, transition: { duration: 0.35, ease: [0.22, 1, 0.36, 1] } }}
-                  className="text-[clamp(3.5rem,10vw,9rem)] font-black leading-[0.81] tracking-[-0.05em] text-transparent"
+                  className="font-archivo-black text-[clamp(3.5rem,10vw,9rem)] font-bold leading-[0.81] tracking-[-0.05em] text-transparent"
                   style={{ WebkitTextStroke: "1.8px rgba(15,23,42,0.95)" }}
                 >
                   {highlight}

@@ -14,7 +14,7 @@ const words = [
   "Putra",
   "Andaya",
   "Seorang",
-  "FrontEnd",
+  "Frontend",
   "Developer",
 ];
 
