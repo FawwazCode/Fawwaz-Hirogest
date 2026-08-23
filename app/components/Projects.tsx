@@ -55,6 +55,15 @@ const projects: Project[] = [
     liveHref: "https://nexora-fawwazcodes-projects.vercel.app/",
   },
   {
+    title: "Xinren Dev (Toko Pribadi)",
+    description:
+      "Build a modern e-commerce platform for managing products, orders, and customer purchases with ease",
+    tech: ["Next.js", "Tailwind CSS", "shadcn/ui", "Lucide React"],
+    imageSrc:
+      "https://mini.s-shot.ru/1366x768/PNG/1366/Z100/?https://xinren-dev.vercel.app/",
+    liveHref: "https://xinren-dev.vercel.app/",
+  },
+  {
     title: "Landing Page Padel",
     description:
     "A modern padel club landing page featuring a dynamic UI, smooth animations, responsive design, and an engaging user experience for showcasing court facilities, booking options, and brand identity.",    
