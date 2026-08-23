@@ -55,6 +55,16 @@ const projects: Project[] = [
     liveHref: "https://nexora-fawwazcodes-projects.vercel.app/",
   },
   {
+    title: "Landing Page Padel",
+    description:
+    "A modern padel club landing page featuring a dynamic UI, smooth animations, responsive design, and an engaging user experience for showcasing court facilities, booking options, and brand identity.",    
+    tech: ["Next.js", "Tailwind CSS", "Framer Motion"],
+    imageSrc:
+    "https://mini.s-shot.ru/1366x768/PNG/1366/Z100/?https://landing-page-padel-1.vercel.app/",
+    // "projects/landing-page-padel.png",
+    liveHref: "https://landing-page-padel-1.vercel.app/",
+  }, 
+  {
     title: "Landing Page Cafe",
     description:
       "A modern cafe landing page featuring elegant UI, smooth animations, responsive design, and an engaging user experience for showcasing menu and brand identity.",    
@@ -62,16 +72,7 @@ const projects: Project[] = [
     imageSrc:
     "projects/landing-page-cafe.png",
     liveHref: "https://contoh-landing-page-cafe.vercel.app/",
-  },
-  // {
-  //   title: "Event Ticketing System",
-  //   description:
-  //     "A comprehensive event ticketing platform featuring interactive seat selection maps, real-time availability updates, and a secure checkout flow.",
-  //   tech: ["Next.js", "Tailwind CSS", "Stripe"],
-  //   imageSrc:
-  //     "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='1200'%20height='675'%3E%3Cdefs%3E%3CradialGradient%20id='g'%20cx='50%25'%20cy='40%25'%20r='80%25'%3E%3Cstop%20offset='0%25'%20stop-color='%23f87171'%20stop-opacity='.45'/%3E%3Cstop%20offset='50%25'%20stop-color='%23b91c1c'%20stop-opacity='.20'/%3E%3Cstop%20offset='100%25'%20stop-color='%23000000'%20/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect%20width='1200'%20height='675'%20fill='url(%23g)'/%3E%3C/svg%3E",
-  //   liveHref: "#",
-  // },
+  }, 
 ];
 
 export default function Projects() {
@@ -162,17 +163,18 @@ export default function Projects() {
                 </div>
 
                 <div className="relative">
-                  <div className="relative aspect-[16/9] w-full overflow-hidden border-b border-black/10 bg-black">
+                  {/* UPDATE: bg-black diubah jadi bg-zinc-50 agar lebih rapi jika ada ruang kosong (letterbox) */}
+                  <div className="relative aspect-[16/9] w-full overflow-hidden border-b border-black/10 bg-zinc-50">
                     <Image
                       src={p.imageSrc}
                       alt={`${p.title} preview`}
                       fill
                       unoptimized
-                      className="object-cover object-top opacity-90 transition duration-500 group-hover:opacity-100 group-hover:scale-[1.02]"
+                      className="object-contain opacity-90 transition duration-500 group-hover:opacity-100 group-hover:scale-[1.02]"
                       sizes="(max-width: 768px) 85vw, (max-width: 1024px) 45vw, 400px"
                     />
 
-                    <div className="absolute inset-0 bg-gradient-to-t from-white/40 via-white/0 to-white/10" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-white/40 via-white/0 to-white/10 pointer-events-none" />
                   </div>
 
                   <div className="p-6">
