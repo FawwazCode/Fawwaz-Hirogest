@@ -57,11 +57,20 @@ const projects: Project[] = [
   {
     title: "Xinren Dev (Toko Pribadi)",
     description:
-      "Build a modern e-commerce platform for managing products, orders, and customer purchases with ease",
+      "A personal online store built with Next.js and Tailwind CSS, featuring a clean and responsive design for managing products, orders, and customer purchases efficiently.",
     tech: ["Next.js", "Tailwind CSS", "shadcn/ui", "Lucide React"],
     imageSrc:
       "https://mini.s-shot.ru/1366x768/PNG/1366/Z100/?https://xinren-dev.vercel.app/",
     liveHref: "https://xinren-dev.vercel.app/",
+  },
+  {
+    title: "AMS Maju Jaya",
+    description:
+      "Modern service landing page designed to showcase AMS Maju Jaya's design services with a clean, approachable, and user-friendly interface.",
+    tech: ["Next.js", "Tailwind CSS", "shadcn/ui", "Lucide React"],
+    imageSrc:
+      "https://mini.s-shot.ru/1366x768/PNG/1366/Z100/?https://ams-maju-jaya.vercel.app/",
+    liveHref: "https://ams-maju-jaya.vercel.app/",
   },
   {
     title: "Landing Page Padel",
