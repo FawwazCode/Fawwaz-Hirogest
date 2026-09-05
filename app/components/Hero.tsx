@@ -11,7 +11,7 @@ type HeroProps = {
 };
 
 export default function Hero({
-  name = "FRONTEND",
+  name = "FULLSTACK",
   highlight = "DEVELOPER",
   subtitle = "",
 }: HeroProps) {

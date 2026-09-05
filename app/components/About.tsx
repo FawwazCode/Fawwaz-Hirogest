@@ -13,8 +13,8 @@ type AboutProps = {
 
 export default function About({
   title = "About Me",
-  paragraph = "I’m a Frontend developer who enjoys turning ideas into polished, high-performance interfaces. I care about clean architecture, accessible UI, and details that make products feel premium—balancing speed, readability, and delightful interactions.",
-  name = "Fawwaz Hirogest | Frontend Developer"
+  paragraph = "I’m a Full Stack Developer who enjoys turning ideas into modern, high-performance web applications. I care about clean architecture, responsive UI, reliable backend systems, and details that make products feel polished—balancing performance, maintainability, and a great user experience.",
+  name = "Fawwaz Hirogest | Fullstack Developer"
 }: AboutProps) {
   const reduceMotion = false;
 

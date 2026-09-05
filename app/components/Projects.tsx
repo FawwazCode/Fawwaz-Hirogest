@@ -28,15 +28,6 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "Freelance Dashboard",
-    description:
-      "A modern freelance management dashboard built with Next.js and Tailwind CSS, designed to manage projects, clients, tasks, invoices, and analytics in one clean and responsive platform.",
-    tech: ["Next.js", "Tailwind CSS", "Framer Motion"],
-    imageSrc:
-    "https://mini.s-shot.ru/1366x768/JPEG/1366/Z100/?https://fawwaz-code-freelance-dashboard.vercel.app/",
-    liveHref: "https://fawwaz-code-freelance-dashboard.vercel.app/",
-  },
-  {
     title: "System Ticketing Management",
     description:
       "Develop a ticket management system to assist the helpdesk team in monitoring and resolve tickets efficiently",
@@ -49,10 +40,19 @@ const projects: Project[] = [
     title: "Nexora E-commerce",
     description:
       "Build a modern e-commerce platform for managing products, orders, and customer purchases with ease",
-    tech: ["Next.js", "React.js", "Tailwind CSS", "shadcn/ui", "Lucide React", "PostgreSQL"],
+    tech: ["Next.js", "Tailwind CSS", "shadcn/ui", "Lucide React", "PostgreSQL"],
     imageSrc:
       "https://mini.s-shot.ru/1366x768/JPEG/1366/Z100/?https://nexora-livid-iota.vercel.app/",
     liveHref: "https://nexora-fawwazcodes-projects.vercel.app/",
+  },
+  {
+    title: "Freelance Dashboard",
+    description:
+      "A modern freelance management dashboard built with Next.js and Tailwind CSS, designed to manage projects, clients, tasks, invoices, and analytics in one clean and responsive platform.",
+    tech: ["Next.js", "Tailwind CSS", "Framer Motion"],
+    imageSrc:
+    "https://mini.s-shot.ru/1366x768/JPEG/1366/Z100/?https://fawwaz-code-freelance-dashboard.vercel.app/",
+    liveHref: "https://fawwaz-code-freelance-dashboard.vercel.app/",
   },
   {
     title: "Xinren Dev (Toko Pribadi)",
@@ -62,6 +62,15 @@ const projects: Project[] = [
     imageSrc:
       "https://mini.s-shot.ru/1366x768/PNG/1366/Z100/?https://xinren-dev.vercel.app/",
     liveHref: "https://xinren-dev.vercel.app/",
+  },
+  {
+    title: "System Canteen School Management",
+    description:
+      "A system for managing school canteen operations, including inventory, orders, and customer management.",
+    tech: ["Laravel", "Bootstrap", "MySQL"],
+    imageSrc:
+      "https://mini.s-shot.ru/1366x768/PNG/1366/Z100/?https://fintech-school-dusky.vercel.app/",
+    liveHref: "https://fintech-school-dusky.vercel.app/login",
   },
   {
     title: "AMS Maju Jaya",
