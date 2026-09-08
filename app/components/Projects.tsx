@@ -31,7 +31,7 @@ const projects: Project[] = [
     title: "System Ticketing Management",
     description:
       "Develop a ticket management system to assist the helpdesk team in monitoring and resolve tickets efficiently",
-    tech: ["Next.js", "Tailwind CSS"],
+    tech: ["Next.js", "Node.js", "Tailwind CSS", "MongoDB"],
     imageSrc:
          "projects/interactive-kanban-dashboard.png",
     liveHref: "#",
