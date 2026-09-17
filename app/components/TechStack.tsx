@@ -99,10 +99,6 @@ const techs: Tech[] = [
     icon: "https://cdn.simpleicons.org/nodedotjs/5FA04E",
   },
   {
-    label: "Go",
-    icon: "https://cdn.simpleicons.org/go/00ADD8",
-  },
-  {
     label: "Supabase",
     icon: "https://cdn.simpleicons.org/supabase/3ECF8E",
   },
@@ -133,14 +129,6 @@ const techs: Tech[] = [
   {
     label: "Ubuntu",
     icon: "https://cdn.simpleicons.org/ubuntu/E95420",
-  },
-  {
-    label: "Linux",
-    icon: "https://cdn.simpleicons.org/linux/FCC624",
-  },
-  {
-    label: "Docker",
-    icon: "https://cdn.simpleicons.org/docker/2496ED",
   },
 ];
 
@@ -177,8 +165,8 @@ export default function TechStack() {
   } as const;
 
 const frontend = techs.slice(0, 8);
-const backend = techs.slice(8, 14);
-const tools = techs.slice(14, 20);
+const backend = techs.slice(8, 15);
+const tools = techs.slice(15, 21);
 
   return (
     <section

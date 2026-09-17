@@ -42,7 +42,7 @@ const projects: Project[] = [
       "Build a modern e-commerce platform for managing products, orders, and customer purchases with ease",
     tech: ["Next.js", "Tailwind CSS", "shadcn/ui", "Lucide React", "PostgreSQL"],
     imageSrc:
-      "https://mini.s-shot.ru/1366x768/JPEG/1366/Z100/?https://nexora-livid-iota.vercel.app/",
+      "https://mini.s-shot.ru/1366x768/JPEG/1366/Z100/?https://nexora-fawwazcodes-projects.vercel.app/",
     liveHref: "https://nexora-fawwazcodes-projects.vercel.app/",
   },
   {
@@ -51,7 +51,7 @@ const projects: Project[] = [
       "A modern freelance management dashboard built with Next.js and Tailwind CSS, designed to manage projects, clients, tasks, invoices, and analytics in one clean and responsive platform.",
     tech: ["Next.js", "Tailwind CSS", "Framer Motion"],
     imageSrc:
-    "https://mini.s-shot.ru/1366x768/JPEG/1366/Z100/?https://fawwaz-code-freelance-dashboard.vercel.app/",
+    "https://mini.s-shot.ru/1366x768/PNG/1366/Z100/?https://fawwaz-code-freelance-dashboard.vercel.app",
     liveHref: "https://fawwaz-code-freelance-dashboard.vercel.app/",
   },
   {
