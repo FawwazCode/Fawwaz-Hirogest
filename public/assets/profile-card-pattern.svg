@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500">
+  <g fill="none" stroke="#fff" stroke-width="5" stroke-linecap="square" stroke-dasharray="7 2" shape-rendering="crispEdges">
+    <path d="m145 126-17 29 17 29"/>
+    <path d="m151 190 22-70"/>
+    <path d="m168 126 17 29-17 29"/>
+    <path d="m335 126-17 29 17 29"/>
+    <path d="m341 190 22-70"/>
+    <path d="m358 126 17 29-17 29"/>
+  </g>
+  <g fill="#fff" shape-rendering="crispEdges">
+    <path d="m130 136h4v4h-4zm8-8h4v4h-4zm8-8h4v4h-4zm-8 48h4v4h-4zm-8-8h4v4h-4zm-8-8h4v4h-4z"/>
+    <path d="m170 120h4v4h-4zm-8 8h4v4h-4zm-8 8h4v4h-4zm16 24h4v4h-4zm8 8h4v4h-4zm8 8h4v4h-4z"/>
+    <path d="m303 128h4v4h-4zm8 8h4v4h-4zm8 8h4v4h-4zm-8 24h4v4h-4zm-8 8h4v4h-4zm-8 8h4v4h-4z"/>
+    <path d="m329 136h4v4h-4zm8-8h4v4h-4zm8-8h4v4h-4zm-8 48h4v4h-4zm-8-8h4v4h-4zm-8-8h4v4h-4z"/>
+    <path d="m146 301h3v3h-3zm12 8h2v2h-2zm-19 10h2v2h-2zm25 14h3v3h-3zm-13 9h2v2h-2zm19 5h2v2h-2z"/>
+    <path d="m384 291h2v2h-2zm13 8h3v3h-3zm-20 13h2v2h-2zm27 5h2v2h-2zm-12 15h3v3h-3zm18 9h2v2h-2z"/>
+    <path d="m111 372h2v2h-2zm31 14h2v2h-2zm-16 13h2v2h-2zm244-18h2v2h-2zm24 16h2v2h-2zm-13 12h2v2h-2z"/>
+  </g>
+</svg>

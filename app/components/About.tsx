@@ -1,9 +1,7 @@
 "use client";
 
-import Image from "next/image";
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { useCallback, useRef } from "react";
-import Lanyard from "./Lanyard/Lanyard";
+import { motion } from "framer-motion";
+import ProfileCard from "../../components/ProfileCard";
 
 type AboutProps = {
   title?: string;
@@ -16,32 +14,6 @@ export default function About({
   paragraph = "I’m a Full Stack Developer who enjoys turning ideas into modern, high-performance web applications. I care about clean architecture, responsive UI, reliable backend systems, and details that make products feel polished—balancing performance, maintainability, and a great user experience.",
   name = "Fawwaz Hirogest | Fullstack Developer"
 }: AboutProps) {
-  const reduceMotion = false;
-
-  const pointerX = useMotionValue(0.5);
-  const pointerY = useMotionValue(0.5);
-
-  const rotateX = useSpring(useTransform(pointerY, [0, 1], [10, -10]), { damping: 30, stiffness: 100 });
-  const rotateY = useSpring(useTransform(pointerX, [0, 1], [-10, 10]), { damping: 30, stiffness: 100 });
-
-  const imageRef = useRef<HTMLDivElement>(null);
-
-  const handlePointerMove = useCallback(
-    (event: React.MouseEvent<HTMLDivElement>) => {
-      const rect = imageRef.current?.getBoundingClientRect();
-      if (!rect) return;
-
-      pointerX.set((event.clientX - rect.left) / rect.width);
-      pointerY.set((event.clientY - rect.top) / rect.height);
-    },
-    [pointerX, pointerY]
-  );
-
-  const handlePointerLeave = useCallback(() => {
-    pointerX.set(0.5);
-    pointerY.set(0.5);
-  }, [pointerX, pointerY]);
-
   return (
     <section id="about" className="relative w-full border-t border-black/5">
       <div className="mx-auto w-full max-w-5xl px-6 py-24 sm:px-10 sm:py-28">
@@ -56,27 +28,23 @@ export default function About({
               hidden: { opacity: 0, x: -40, filter: "blur(8px)" },
               visible: { opacity: 1, x: 0, filter: "blur(0px)", transition: { duration: 1, ease: [0.22, 1, 0.36, 1] } }
             }}
-            className="mx-auto w-full max-w-[360px] lg:max-w-none" 
-            style={{ perspective: 1000 }}
+            className="mx-auto w-full max-w-[360px] lg:max-w-none"
           >
-            <motion.div 
-              ref={imageRef}
-              onMouseMove={handlePointerMove}
-              onMouseLeave={handlePointerLeave}
-              style={{ rotateX, rotateY }}
-              tabIndex={0}
-              className="group relative overflow-visible focus:outline-none"            
-            >
-              <div className="pointer-events-none absolute inset-0 z-10 opacity-60 mix-blend-overlay transition-opacity duration-700 group-hover:opacity-0 group-focus:opacity-0 group-active:opacity-0">
-                <div className="absolute -top-20 left-1/2 h-64 w-64 -translate-x-1/2 rounded-full bg-gradient-to-r from-[rgb(var(--accent-1)/0.3)] to-[rgb(var(--accent-2)/0.3)] blur-3xl" />
-              </div>
-              <div className="relative">
-                <Lanyard 
-                  position={[0,0,13]}
-                  gravity={[0,-40,0]}
-                />
-              </div>
-            </motion.div>
+            {/* <ProfileCard
+              avatarUrl="/image/profile.png"
+              miniAvatarUrl="/image/profile.png"
+              name="Fawwaz Hirogest Putra Andaya"
+              title="Fullstack Developer"
+              handle="hirogest23"
+              status="Portfolio"
+              statusColor="#00ff00"
+              contactText="Email me"
+              onContactClick={() => {
+                window.location.href = "mailto:hirogest23@gmail.com";
+              }}
+              className="mx-auto"
+            /> */}
+            <ProfileCard/>
           </motion.div>
 
           <div>
@@ -120,4 +88,3 @@ export default function About({
     </section>
   );
 }
-
