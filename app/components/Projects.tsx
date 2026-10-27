@@ -37,12 +37,21 @@ const projects: Project[] = [
     liveHref: "#",
   },
   {
+    title: "Style E-commerce",
+    description:
+      "Build a modern e-commerce platform for managing products, orders, and customer purchases with ease",
+    tech: ["Next.js", "Tailwind CSS", "shadcn/ui", "Lucide React", "PostgreSQL"],
+    imageSrc:
+      "projects/stylegw.png",
+    liveHref: "https://style-gw.vercel.app/",
+  },
+  {
     title: "Nexora E-commerce",
     description:
       "Build a modern e-commerce platform for managing products, orders, and customer purchases with ease",
     tech: ["Next.js", "Tailwind CSS", "shadcn/ui", "Lucide React", "PostgreSQL"],
     imageSrc:
-      "https://mini.s-shot.ru/1366x768/JPEG/1366/Z100/?https://nexora-fawwazcodes-projects.vercel.app/",
+      "projects/Nexora.png",
     liveHref: "https://nexora-fawwazcodes-projects.vercel.app/",
   },
   {
@@ -51,7 +60,7 @@ const projects: Project[] = [
       "A modern freelance management dashboard built with Next.js and Tailwind CSS, designed to manage projects, clients, tasks, invoices, and analytics in one clean and responsive platform.",
     tech: ["Next.js", "Tailwind CSS", "Framer Motion"],
     imageSrc:
-    "https://mini.s-shot.ru/1366x768/PNG/1366/Z100/?https://fawwaz-code-freelance-dashboard.vercel.app",
+    "projects/freelance-dashboard.png",
     liveHref: "https://fawwaz-code-freelance-dashboard.vercel.app/",
   },
   {
@@ -60,7 +69,7 @@ const projects: Project[] = [
       "A personal online store built with Next.js and Tailwind CSS, featuring a clean and responsive design for managing products, orders, and customer purchases efficiently.",
     tech: ["Next.js", "Tailwind CSS", "shadcn/ui", "Lucide React"],
     imageSrc:
-      "https://mini.s-shot.ru/1366x768/PNG/1366/Z100/?https://xinren-dev.vercel.app/",
+      "projects/xinrendev.png",
     liveHref: "https://xinren-dev.vercel.app/",
   },
   {
@@ -69,7 +78,7 @@ const projects: Project[] = [
       "A system for managing school canteen operations, including inventory, orders, and customer management.",
     tech: ["Laravel", "Bootstrap", "MySQL"],
     imageSrc:
-      "https://mini.s-shot.ru/1366x768/PNG/1366/Z100/?https://fintech-school-dusky.vercel.app/",
+      "projects/canteen.png",
     liveHref: "https://fintech-school-dusky.vercel.app/login",
   },
   {
@@ -78,19 +87,9 @@ const projects: Project[] = [
       "Modern service landing page designed to showcase AMS Maju Jaya's design services with a clean, approachable, and user-friendly interface.",
     tech: ["Next.js", "Tailwind CSS", "shadcn/ui", "Lucide React"],
     imageSrc:
-      "https://mini.s-shot.ru/1366x768/PNG/1366/Z100/?https://ams-maju-jaya.vercel.app/",
+      "projects/ams.png",
     liveHref: "https://ams-maju-jaya.vercel.app/",
   },
-  {
-    title: "Landing Page Padel",
-    description:
-    "A modern padel club landing page featuring a dynamic UI, smooth animations, responsive design, and an engaging user experience for showcasing court facilities, booking options, and brand identity.",    
-    tech: ["Next.js", "Tailwind CSS", "Framer Motion"],
-    imageSrc:
-    "https://mini.s-shot.ru/1366x768/PNG/1366/Z100/?https://landing-page-padel-1.vercel.app/",
-    // "projects/landing-page-padel.png",
-    liveHref: "https://landing-page-padel-1.vercel.app/",
-  }, 
   {
     title: "Landing Page Cafe",
     description:
